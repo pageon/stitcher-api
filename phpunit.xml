@@ -6,7 +6,7 @@
 >
     <testsuites>
         <testsuite name="default">
-            <directory>tests/Pageon</directory>
+            <directory>tests/Pageon/Stitcher</directory>
         </testsuite>
     </testsuites>
 </phpunit>
