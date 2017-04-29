@@ -4,5 +4,8 @@ build:
             version: 7.0.8
     tests:
         override:
-            -
-                command: 'vendor/bin/phpunit'
+            - command: 'vendor/bin/phpunit'
+checks:
+    php:
+        code_rating: true
+        duplication: true
