@@ -1,0 +1,12 @@
+<phpunit
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="true"
+        testsuite="default"
+>
+    <testsuites>
+        <testsuite name="default">
+            <directory>tests/Pageon</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

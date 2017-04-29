@@ -1,0 +1,5 @@
+api:
+#    endpoint:
+
+directories:
+    api: ./api

@@ -1,0 +1,20 @@
+services:
+    app.api:
+        class: Pageon\Stitcher\Application\ApiApplication
+        arguments: ['@api.router.collector']
+
+    api.pages:
+        class: Pageon\Stitcher\Api\Pages
+        arguments: ['%directories.src%']
+
+    api.router.collector:
+        class: FastRoute\RouteCollector
+        arguments: ['@api.router.route.parser', '@api.router.data.generator']
+        calls:
+            - [addRoute, [GET, '/pages[/{id:.+}]', ['@api.pages', 'get']]]
+
+    api.router.route.parser:
+        class: FastRoute\RouteParser\Std
+
+    api.router.data.generator:
+        class: FastRoute\DataGenerator\GroupCountBased
