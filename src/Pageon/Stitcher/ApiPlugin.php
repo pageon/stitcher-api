@@ -23,4 +23,13 @@ class ApiPlugin implements Plugin
     public function getServicesPath() {
         return __DIR__ . '/../../services.yml';
     }
+
+    /**
+     * Initialise your plugin.
+     *
+     * @return void
+     */
+    public function init() {
+        return;
+    }
 }
